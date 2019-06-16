@@ -1,4 +1,7 @@
 // Add your Circle class here
+// Diameter = radius • 2
+// Circumference = π • diameter
+// Area = π • radius2
 
 const pi = Math.PI
 
@@ -15,19 +18,21 @@ class Circle {
     return this.radius * 2
   }
 
-  get circumference() {
-      return ( this.radius * 2 ) * pi
-    }
-
   set circumference( circumference ) {
     this.radius = circumference / ( pi * 2 )
   }
 
-  get area() {
-    return pi * ( this.radius * this.radius )
-  }
+  get circumference() {
+      return ( this.radius * 2 ) * pi
+    }
 
   set area( area ) {
     this.radius = Math.sqrt( area / pi )
   }
+
+  get area() {
+    return pi * ( this.radius**2 )
+  }
+
+
 }
